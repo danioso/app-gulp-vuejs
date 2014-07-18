@@ -1,0 +1,23 @@
+{
+  "name": "webapp",
+  "version": "0.0.1",
+  "authors": [
+    "Daniel Osorio <danosot@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/bower",
+    "dist"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "bootstrap": "~3.1.1",
+    "font-awesome": "~4.0.3",
+    "lodash": "~2.4.1",
+    "backbone": "~1.1.2",
+    "superagent": "~0.18.0",
+    "vue": "~0.10.5"
+  }
+}

@@ -1,0 +1,72 @@
+html(lang='en')
+  head
+    
+    meta(charset="utf-8")
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+    title webapp
+
+    meta(name='description',  content='webapp stack')
+    meta(name='keywords',     content='weapp, stack, gulp')
+
+    link(href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700', rel='stylesheet', type='text/css')
+
+    // build:css(./bower_components/) styles/base.css 
+    link(rel="stylesheet", href="bower/bootstrap/dist/css/bootstrap.css")
+    link(rel="stylesheet", href="bower/font-awesome/css/font-awesome.css")
+    // endbuild 
+    
+    // build:css styles/main.css  
+    link(rel="stylesheet", href="styles/main.css") 
+    // endbuild 
+
+    link(rel="shortcut icon", href="images/favicon.ico") 
+
+  body 
+    
+    .container-fluid
+      h1 a
+
+    .container
+      
+      block content
+
+    block footer
+
+    footer#footer
+      .container
+        .row
+          .col-md-12
+            | &copy;
+
+
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js")
+    script.
+      window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')
+      
+    // build:js(./bower_components/) scripts/base.js 
+    script(src="bower/bootstrap/dist/js/bootstrap.js")
+    // endbuild 
+
+    // build:js scripts/main.js 
+    script(src="scripts/main.js") 
+    // endbuild 
+
+    // Google Tag Manager
+    // Replace XXX-XXXXXX with your own Google Tag Manager ID
+    //- noscript
+      iframe(src="//www.googletagmanager.com/ns.html?id=XXX-XXXXXX", height="0", width="0", style="display:none;visibility:hidden")
+    //- script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','XXX-XXXXXX');
+    // End Google Tag Manager
+
+
+
+
+
+
+
