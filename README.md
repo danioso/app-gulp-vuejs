@@ -9,31 +9,29 @@ Workflow to start, develop and deploy an application with gulp, Vue.js, CoffeeSc
 Unless previously installed you'll need Cairo. For system-specific installation view the [node-canvas wiki](https://github.com/LearnBoost/node-canvas/wiki/_pages).
 
 ```shell
-bower install
-npm install
+$ npm install
+$ bower install
 ```
 
-Signup for an API Key from https://tinypng.com/developers
+Set the following environment variable, you will an API Key from TinyPNG to compress png files [https://tinypng.com/developers](https://tinypng.com/developers)
 
 ```shell
-export WEBAPP_PNG_COMPRESSION_SERVICE_KEY="API_KEY"
+$ export WEBAPP_PNG_COMPRESSION_SERVICE_KEY="API_KEY"
 ```
 
 ## Tasks
 
+Runing watch task to develop.
 ```shell
-
-# Runing watch task and start server on localhost:9000 
-gulp watch
-
-# Runing build task (minify and rev files)
-gulp build
-
-# Runing build with tinypng compression service
-gulp build --png-compression
-
-# Runing publish to s3
-gulp publish --service s3
-
+$ gulp watch
 ```
+Runing build task to get files ready for production.
+```shell
+$ gulp build
+```
+Runing build with tinypng compression service
+```shell
+$ gulp build --png-compression
+```
+
 

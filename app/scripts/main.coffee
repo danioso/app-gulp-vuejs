@@ -16,7 +16,7 @@ main =
 
   # Model
   data:
-    title: 'component hello world'
+    title: 'App title'
 
 # Inititalize main component
 new Vue main

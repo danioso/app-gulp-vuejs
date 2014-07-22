@@ -15,25 +15,12 @@ path =
 	dist: 'dist/'
 	bower: 'bower_components/bower/'
 
-# Publish Services
-services = 
-	s3: ''
-	'gh-pages': ''
-
-getServices = ->
-	str = ''
-	for item of services
-		str += '\n' + '	' + item
-	str
-
 # Vars
 pngServiceKey 	= process.env.WEBAPP_PNG_COMPRESSION_SERVICE_KEY
 
 # Arguments
 pngService 		= Boolean $.args.pngCompression
 
-# Service name to publish
-publishService 	= String $.args.service
 
 # Check if png compression service is active
 if pngService and !pngServiceKey 
@@ -43,21 +30,6 @@ if pngService and !pngServiceKey
 		'Puedes optener un token en la sigueinte página: https://tinypng.com/developers' + '\n'
 	
 	process.exit()
-
-# Check if publish service is active
-# Check context availability
-if !publishService or services[publishService] is undefined
-
-	strServices = do getServices
-
-	$.util.log 'Error: \n\n' + 
-		'Debes especificar el servicio de la aplicación. \n\n' + 
-		'Ejemplo: \n' +
-		'	gulp watch --service gh-pages \n\n' +
-		'Services:' + strServices + '\n'
-
-	process.exit()
-
 
 # Banner
 banner = [
